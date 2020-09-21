@@ -27,7 +27,7 @@ public class H081 extends Applet {
 
         // aansluiter
         knop.addActionListener(new KnopListener());
-        refreshknop.addActionListener(new KnopListener());
+        refreshknop.addActionListener(new knopdelete());
 
     }
 
@@ -77,5 +77,19 @@ public class H081 extends Applet {
 
         }
     }
+
+    class knopdelete implements ActionListener{
+
+        public void actionPerformed( ActionEvent e ){
+            String delete = textvak.getText();
+            refreshknop. setLabel(delete);
+
+
+
+            repaint();
+
+
+        }
+    }
 }
-// het lukt niet om die refresh knop te laten refreshen >:(
+// TODO het lukt niet om die refresh knop te laten refreshen >:(

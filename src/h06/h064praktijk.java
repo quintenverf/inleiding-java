@@ -21,7 +21,7 @@ public class h064praktijk extends Applet {
         uitkomst3 = 6.3666666 * 10;
         uitkomst4 = 63;
         u5 = 63/10;
-        // hij word steeds afgerond en ik weet niet waarom want hij staat in een double maar gedraagr zich als een int.
+        // TODO hij word steeds afgerond en ik weet niet waarom want hij staat in een double maar gedraagr zich als een int.
 
     }
 
