@@ -19,6 +19,7 @@ public class H084praktijk extends Applet {
     double minus;
     double inkomst;
     double uitkomst;
+    double output;
     Label antwoord;
 
     public void init() {
@@ -30,38 +31,79 @@ public class H084praktijk extends Applet {
 
         gedeelddoor = new Button(" / ");
         add(gedeelddoor);
+        gedeelddoor.addActionListener( new gedeelddoorvaklistener() );
 
         keer = new Button(" * ");
         add(keer);
+        keer.addActionListener(new keervaklistener());
 
         plus = new Button(" + ");
         add(plus);
+        plus.addActionListener(new keervaklistener());
 
         min = new Button(" - ");
         add(min);
+        min.addActionListener(new minvaklistener());
+
 
         antwoord = new Label(" ");
         add(antwoord);
 
         uitkomst = 0.0;
+        inkomst = 0.0;
 
-        tekstvak1.addActionListener(new tekstvaklistener ());
+        tekstvak1.addActionListener(new keervaklistener());
 
     }
 
     public void paint(Graphics g) {
-        setBackground(Color.black);
+       // setBackground(Color.black);
         antwoord.setLocation(40,40);
 
-        g.drawString(" " + antwoord,80,40);
+        g.drawString(" antwoord " + output,80,40);
     }
-    class tekstvaklistener implements ActionListener{
+    class keervaklistener implements ActionListener{
 
         public void actionPerformed(ActionEvent e) {
             inkomst = Double.parseDouble(tekstvak1.getText());
-            devide = (inkomst / uitkomst);
-            repaint();
+            uitkomst = Double.parseDouble(tekstvak2.getText());
+            output = inkomst *uitkomst;
+            tekstvak1.setText("" + output);
+            tekstvak2.setText("");
+              //  repaint();
+        }
+    }
+    class gedeelddoorvaklistener implements ActionListener{
 
+        public void actionPerformed(ActionEvent e) {
+            inkomst = Double.parseDouble(tekstvak1.getText());
+            uitkomst = Double.parseDouble(tekstvak2.getText());
+            output = inkomst /uitkomst;
+            tekstvak1.setText("" + output);
+            tekstvak2.setText("");
+                //repaint();
+        }
+    }
+    class plusvaklistener implements ActionListener{
+
+        public void actionPerformed(ActionEvent e) {
+            inkomst = Double.parseDouble(tekstvak1.getText());
+            uitkomst = Double.parseDouble(tekstvak2.getText());
+            output = inkomst +uitkomst;
+            tekstvak1.setText("" + output);
+            tekstvak2.setText("");
+                //repaint();
+        }
+    }
+    class minvaklistener implements ActionListener{
+
+        public void actionPerformed(ActionEvent e) {
+            inkomst = Double.parseDouble(tekstvak1.getText());
+            uitkomst = Double.parseDouble(tekstvak2.getText());
+            output = inkomst -uitkomst;
+            tekstvak1.setText("" + output);
+            tekstvak2.setText("");
+                //repaint();
         }
     }
 
