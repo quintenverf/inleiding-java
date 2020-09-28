@@ -9,35 +9,40 @@ public class H10_1 extends Applet {
 
     TextField tekstvak;
     Label label;
-    String tekst;
-    double getal;
+    String input;
+    double inputgetal;
+    double hoogstegetal;
+    double uitkomst;
 
     public void init() {
-        tekstvak = new TextField(10);
-        add(tekstvak);
+        tekstvak = new TextField("", 5);
         tekstvak.addActionListener(new Tekstvak() );
+        input = "";
+        label = new Label("type your highest number and press enter");
 
-        label = new Label();
+        // uitkomst = 0.0;
+        add(tekstvak);
         add(label);
-
-        getal = 0.0;
-
 
     }
 
     public void paint(Graphics g) {
-//        g.drawString(""+ 8 + " is groter dan " + 5 + " : " + (8>5), 50,60);
-//        g.drawString(""+ 8 + " is kleiner dan " + 5 + " : " + (8<5), 50,80);
         label.setLocation(40,40);
 
-        g.drawString("antwoord " + getal, 40,60);
+        g.drawString("antwoord " + uitkomst, 40,100);
+        g.drawString(input, 40,80);
 
 
     }
     class Tekstvak implements ActionListener{
-
         public void actionPerformed(ActionEvent e) {
-
+           input = tekstvak.getText();
+           inputgetal = Double.parseDouble(input);
+           if (inputgetal > hoogstegetal){
+               hoogstegetal = inputgetal;
+               uitkomst = hoogstegetal;
+               repaint();
+           }
 
         }
     }
