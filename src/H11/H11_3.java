@@ -9,6 +9,8 @@ public class H11_3 extends Applet {
 
     }
     public void paint(Graphics g) {
+        setBackground(Color.black);
+        g.setColor(Color.white);
         g.drawString("1, ",10,20);
         g.drawString("1, ",10,40);
         g.drawString("2, ",10,60);
