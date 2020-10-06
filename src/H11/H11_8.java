@@ -23,7 +23,7 @@ public class H11_8 extends Applet {
             width += 20;
             height += 20;
             teller ++;
-            
+
         }
     }
 }
