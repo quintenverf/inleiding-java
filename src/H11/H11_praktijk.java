@@ -155,3 +155,4 @@ public class H11_praktijk extends Applet {
         }
     }
 }
+// TODO ik weet dat ik het anders kon doen door er variabelen van te maken bijvoorbeeld om van 1 en 2 een int te maken. input1 + input2 = ouput zo zou ik er een loop van kunne maken.

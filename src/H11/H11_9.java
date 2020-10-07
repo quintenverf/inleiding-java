@@ -30,7 +30,7 @@ public class H11_9 extends Applet {
                     g.setColor(Color.white);
                     g.fillRect(x, y, width, height);
                 }
-                x += width;
+               x += width;
             }
         }
     }
