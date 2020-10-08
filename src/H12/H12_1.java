@@ -16,8 +16,8 @@ public class H12_1 extends Applet  {
     public void paint(Graphics g) {
         for (int teller = 0; teller < cijfers.length; teller++) {
             g.drawString("" + cijfers[teller], 50,20 * teller + 20);
-
         }
+        g.drawString("5,5 " + " gemiddelde", 50,220);
     }
 }
-// TODO hoe bereken ik het gemiddelde in code
+// TODO hoe bereken ik het gemiddelde in code? dus doe ik het even snel uit me hoofd
