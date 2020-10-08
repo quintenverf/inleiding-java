@@ -42,6 +42,9 @@ public class H12_3 extends Applet {
 
         textvak1.addActionListener( new textvaklistener());
         textvak2.addActionListener( new textvaklistener());
+        textvak3.addActionListener( new textvaklistener());
+        textvak4.addActionListener( new textvaklistener());
+        textvak5.addActionListener( new textvaklistener());
     }
     public void paint(Graphics g) {
         textvak1.setLocation(102, 10);
@@ -60,13 +63,21 @@ public class H12_3 extends Applet {
         public void actionPerformed(ActionEvent e) {
             input1 = Double.parseDouble(textvak1.getText());
             input2 = Double.parseDouble(textvak2.getText());
+            input3 = Double.parseDouble(textvak3.getText());
+            input4 = Double.parseDouble(textvak4.getText());
+            input5 = Double.parseDouble(textvak5.getText());
             output1 = input1;
             output2 = input2;
+            output3 = input3;
+            output4 = input4;
+            output5 = input5;
             textvak1.setText( "" + output1);
             textvak2.setText("" +  output2);
-            textvak3.setText("" + output1);
-            textvak4.setText("" + output1);
-            textvak5.setText("" + output1);
+            textvak3.setText("" + output3);
+            textvak4.setText("" + output4);
+            textvak5.setText("" + output5);
         }
     }
 }
+// TODO ik ben er net achter gekomen hoe ik dit in een loop moet zetten maar dit werkt ook.... kinda
+// TODO heb het geprobeert met arrays.sort maar weet de volgorde niet precies
