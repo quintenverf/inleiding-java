@@ -17,7 +17,6 @@ public class H12_2 extends Applet {
         }
         for (int teller = 0; teller < amount.length; teller++) {
             add(amount[teller]);
-            //g.drawString("" + buttons, 50,20 * teller + 20);
         }
     }
 
