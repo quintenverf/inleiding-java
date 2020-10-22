@@ -25,10 +25,13 @@ public class H13_2 extends Applet {
         quinten.setColor(Color.red);
         for (int tellerHorizontal = 25; tellerHorizontal > 0; tellerHorizontal--) {
             for (int tellervertical = 0; tellervertical < 25; tellervertical++) {
+                quinten.setColor(Color.red);
                 quinten.fillRect(x, y, width, height);
+                quinten.setColor(Color.black);
+                quinten.drawRect(x, y, width, height);
                 x += width;
             }
-            y += 21;
+            y += 20;
             x = 1;
         }
 
