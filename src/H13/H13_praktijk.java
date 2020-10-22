@@ -4,18 +4,18 @@ import java.applet.Applet;
 import java.awt.*;
 
 public class H13_praktijk extends Applet {
-    int xRect = 500;
+    int xRect = 60;
     int yRect = 300;
     int widthRect = 60;
     int heightRect = 200;
 
-    int xOval = 430;
+    int xOval = 0;
     int yOval = 200;
     int widthOval = 200;
     int heightOval = 200;
 
     public void init() {
-        setSize(1000,500);
+        setSize(1000,1000);
 
     }
     public void paint(Graphics g) {
@@ -27,13 +27,13 @@ public class H13_praktijk extends Applet {
 
                 quinten.setColor(new Color(135, 118, 70));
                 quinten.fillRect(xRect, yRect, widthRect, heightRect);
-                xRect += widthRect;
+                xRect += widthRect + 140;
                 quinten.setColor(new Color(93, 143, 106));
                 quinten.fillOval(xOval, yOval, widthOval, heightOval);
                 xOval += widthOval;
             }
             yRect += 300;
-            xRect = 0;
+            xRect = 70;
             yOval += 300;
             xOval = 0;
         }
