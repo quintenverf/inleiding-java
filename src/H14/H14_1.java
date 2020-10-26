@@ -41,10 +41,10 @@ public class H14_1 extends Applet {
                     tekst = "" + shuffle;
             }
         }
-        g.drawString("" + tekst2, 50,50);
+        g.drawString("" + tekst2, 40,50);
         if (clicked == true){
             r = Math.random();
-            shuffle = (int) (r * 4);
+            shuffle = (int) (r * 4 + 1);
             switch (shuffle){
                 case 1:
                     tekst2 = "spades";
