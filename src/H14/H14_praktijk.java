@@ -10,7 +10,7 @@ public class H14_praktijk extends Applet {
     private Button play;
     private String game;
 
-    private int rest, comp, random, i, playing;
+    private int rest, computer, random, i, playing;
     private int next[] = {21,17,13,9,5,1};
     private int X, Y;
 
@@ -28,7 +28,7 @@ public class H14_praktijk extends Applet {
 
         setSize(600,500);
         rest = 23;
-        comp = 0;
+        computer = 0;
         playing = 1;
 
         X = 20;
@@ -36,7 +36,7 @@ public class H14_praktijk extends Applet {
     }
     public void paint(Graphics g) {
         if (playing == 1) {
-            g.drawString("De computer heeft " + comp + " smileys weggehaald.", 10, 70);
+            g.drawString("De computer heeft " + computer + " smileys weggehaald.", 10, 70);
             g.drawString("Aantal resterende smileys: " + rest + ". Jouw beurt.", 10, 90);
 
             for (int p = 0; p < rest; p++) {
@@ -88,10 +88,10 @@ public class H14_praktijk extends Applet {
                         double r = Math.random();
                         random = (int) (r * 3 + 1);
                         rest -= random;
-                        comp = random;
+                        computer = random;
                     } else {
                         rest -= temp;
-                        comp = temp;
+                        computer = temp;
                     }
                     i++;
                 } else if (input == 2) {
@@ -99,10 +99,10 @@ public class H14_praktijk extends Applet {
                         double r = Math.random();
                         random = (int) (r * 3 + 1);
                         rest -= random;
-                        comp = random;
+                        computer = random;
                     } else {
                         rest -= temp;
-                        comp = temp;
+                        computer = temp;
                     }
                     i++;
                 } else if (input == 3) {
@@ -110,10 +110,10 @@ public class H14_praktijk extends Applet {
                         double r = Math.random();
                         random = (int) (r * 3 + 1);
                         rest -= random;
-                        comp = random;
+                        computer = random;
                     } else {
                         rest -= temp;
-                        comp = temp;
+                        computer = temp;
                     }
                     i++;
                 }
